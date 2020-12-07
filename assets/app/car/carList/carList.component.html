@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Muzayede Araç Listesi</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Model</th>
+        <th scope="col">Model Year</th>
+        <th scope="col">Version</th>
+        <th scope="col">Color</th>
+        <th scope="col">Kilometer</th>
+        <th scope="col">Fuel Type</th>
+        <th scope="col">Gear Type</th>
+        <th scope="col">Motor Power</th>
+        <th scope="col">Cylinder Volume</th>
+        <th scope="col">Spare Key</th>
+        <th scope="col">Inspection Finish</th>
+        <th scope="col">Plate Number</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of carLists">
+        <td>{{car.id}}</td>
+        <td>{{car.brand}}</td>
+        <td>{{car.model}}</td>
+        <td>{{car.modelYear}}</td>
+        <td>{{car.version}}</td>
+        <td>{{car.color}}</td>
+        <td>{{car.kilometer}}</td>
+        <td>{{car.fuelType}}</td>
+        <td>{{car.gearType}}</td>
+        <td>{{car.motorPower}}</td>
+        <td>{{car.cylinderVolume}}</td>
+        <td>{{car.spareKey}}</td>
+        <td>{{car.inspectionFinish}}</td>
+        <td>{{car.plateNumber}}</td>
+        <td routerLink="/cardetail/{{ car.id }}"><button class="btn btn-primary">Detay</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
